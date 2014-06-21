@@ -28,6 +28,6 @@
   (newline)
   (displayln "Properties:")
   (for ([key (in-list keys)])
-    (displayln (~a "  " key ": " (syntax-property key))))
+    (displayln (~a "  " key ": " (syntax-property stx key))))
   (newline)
   (prule))
