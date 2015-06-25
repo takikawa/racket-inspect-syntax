@@ -1,6 +1,7 @@
 #lang racket/base
 
-(require racket/format
+(require macro-debugger/util/stxobj ; warning: private module
+         racket/format
          racket/pretty)
 
 (provide inspect-syntax)
@@ -30,4 +31,5 @@
   (for ([key (in-list keys)])
     (displayln (~a "  " key ": " (syntax-property stx key))))
   (newline)
+  (printf "Marks: ~a~n" (get-marks stx))
   (prule))
